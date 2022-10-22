@@ -13,7 +13,6 @@
   "devDependencies": {
     "electron": "^21.1.0",
     "electron-packager": "^16.0.0",
-    "electron-rebuild": "^3.2.9",
-    "string-similarity-js": "^2.1.4"
+    "electron-rebuild": "^3.2.9"
   }
 }
