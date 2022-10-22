@@ -30,13 +30,15 @@ jobs:
           filename: "release.zip"
           path: "./compara-listas-win32-x64"
           
-      - name: Auto Generate Next Release Tag
-        uses: amitsingh-007/next-release-tag@v2.2.0
+      - name: Generate release tag
+        uses: amitsingh-007/next-release-tag@v1.0.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         
       - name: Create Release
         uses: ncipollo/release-action@v1.11.1
         with:
           allowUpdates: true
           artifacts: "release.zip"
-          tag: ${{release_tag}}
+          tag: ${{ env.release_tag }}
 
