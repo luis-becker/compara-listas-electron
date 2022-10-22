@@ -15,5 +15,8 @@ jobs:
         uses: actions/setup-node@v3.5.1
         with:
           node-version: v16.15.1
+        
+      - name: Install dependencies
+        run: npm install
           
   
