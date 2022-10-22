@@ -19,4 +19,5 @@ jobs:
       - name: Install dependencies
         run: npm install
           
-  
+      - name: Build Windows application
+        run: npm run build
