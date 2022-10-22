@@ -25,6 +25,7 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1.11.1
         with:
-          artifact: compara-listas-win32-x64
+          allowUpdates: true
+          artifacts: ./compara-listas-win32-x64
           tag: latest
 
