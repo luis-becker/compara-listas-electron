@@ -29,6 +29,9 @@ jobs:
         with:
           filename: "release.zip"
           path: "./compara-listas-win32-x64"
+          
+      - name: Create an incremental release
+        uses: aurestic/incrementarl-create-release@master
         
       - name: Create Release
         uses: ncipollo/release-action@v1.11.1
