@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v2.5.0
@@ -26,6 +28,6 @@ jobs:
         uses: ncipollo/release-action@v1.11.1
         with:
           allowUpdates: true
-          artifacts: ./compara-listas-win32-x64
+          artifacts: "./compara-listas-win32-x64"
           tag: latest
 
