@@ -24,10 +24,16 @@ jobs:
       - name: Build Windows application
         run: npm run build
         
+      - name: Zip Release
+        uses: TheDoctor0/zip-release@0.6.2
+        with:
+          filename: "release.zip"
+          path: "./compara-listas-win32-x64"
+        
       - name: Create Release
         uses: ncipollo/release-action@v1.11.1
         with:
           allowUpdates: true
-          artifacts: "./compara-listas-win32-x64"
+          artifacts: "release.zip"
           tag: latest
 
